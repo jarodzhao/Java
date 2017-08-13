@@ -31,6 +31,8 @@ class Test
 				{
 					sum++;
 					System.out.println(a);
+
+					//取消注释后,可计算找到第一个符合要求的数值用时
 					//return;
 				}
 			}
