@@ -3,22 +3,24 @@ import java.util.Map.*;
 
 class  AccClass
 {
+	@SuppressWarnings("unchecked")
 	public static void main(String[] args) 
 	{
+		// HashMap 的迭代方式
 		HashMap<String, String> hm = new HashMap<>();
 
 		for (byte i=0;i<10 ;i++ ){
 			hm.put("name #" + i, "jarod #" + i);
 		}
 
-		// 1
+		// 第一种迭代方式
 		for (String key : hm.keySet()){
 			System.out.println(key + "||" + hm.get(key));
 		}
 		
 		System.out.println();
 
-		// 2
+		// 第二种迭代方式
 		Iterator iter = hm.entrySet().iterator();
 		while(iter.hasNext()){
 			Entry<String, String> entry = (Entry<String, String>) iter.next();
@@ -27,7 +29,7 @@ class  AccClass
 		
 		System.out.println();
 
-		// 3
+		// 第三种迭代方式
 		for (String v : hm.values() )
 		{
 			System.out.println(v);
@@ -35,7 +37,7 @@ class  AccClass
 
 		System.out.println();
 
-		// 4
+		// 第四种迭代方式
 		for (Entry<String, String> entry : hm.entrySet())
 		{
 			System.out.println(entry.getKey() + "||" + entry.getValue());
@@ -45,8 +47,8 @@ class  AccClass
 		System.out.println(hm.values());
 		System.out.println();
 		
-		// sort
-        List<Map.Entry<String,String>> list = new ArrayList<Map.Entry<String,String>>(hm.entrySet());
+		// HashMap 的排序
+        List<Entry<String,String>> list = new ArrayList<Entry<String,String>>(hm.entrySet());
         Collections.sort(list,new Comparator<Map.Entry<String,String>>() {
             public int compare(Entry<String, String> o1,
                     Entry<String, String> o2) {
