@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Test 
+class TestCPU
 {
 	//测试 JAVA 程序运行时间
 	public static void main(String[] args) 
