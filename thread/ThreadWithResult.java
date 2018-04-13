@@ -36,6 +36,7 @@ class ThreadWithResult
 	}
 }
 
+// 可以返回结果的线程对象
 class CallableDemo implements Callable<String> 
 {
 	private int id;
