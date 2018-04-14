@@ -1,7 +1,10 @@
+
+// 继承抽象类 IntGenerator
 public class EvenGenerator extends IntGenerator {
 
 	private int currentEvenValue = 0;
 
+	// 实现抽象类中的方法
 	public int next() {
 		++currentEvenValue;
 		++currentEvenValue;
