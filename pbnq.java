@@ -10,6 +10,7 @@ class pbnq
         System.err.println(a);
         System.err.println(b);
 
+        // 最大数
         while(c < 100)
         {
             c = a + b;
