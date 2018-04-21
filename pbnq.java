@@ -1,5 +1,6 @@
 class pbnq 
 {
+    // 生成裴波那切数列
 	public static void main(String[] args) 
 	{
 		long a = 1;
