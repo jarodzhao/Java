@@ -1,16 +1,15 @@
-package a;
 
 import java.sql.*;
 
 
 // jdbc 读写数据
-public class abc
+public class jdbc
 {
 	static final String USER = "root";
 	static final String PASS = "root";
 	
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-	static final String DB_URL = "jdbc:mysql://localhost:3306/mydb?useSSL=false";
+	static final String DB_URL = "jdbc:mysql://localhost:3306/xzjcy?useSSL=false";
 	
 	public static void main(String[] args)
 	{
@@ -40,7 +39,7 @@ public class abc
 			
 			// 读取数据
 			stmt = conn.createStatement();
-			sql = "select * from member";
+			sql = "select * from t_user";
 			ResultSet rs = stmt.executeQuery(sql);
 
 			while(rs.next())
