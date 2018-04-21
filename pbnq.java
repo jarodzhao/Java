@@ -11,7 +11,7 @@ class pbnq
         System.err.println(b);
 
         // 最大数
-        while(c < 100)
+        while(c < 1000)
         {
             c = a + b;
             a = b;
