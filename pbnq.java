@@ -16,7 +16,7 @@ class pbnq
             c = a + b;
             a = b;
             b = c;
-            System.err.println(c);
+            System.err.println("--" + c);
         }
 	}
 }
