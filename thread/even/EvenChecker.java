@@ -5,6 +5,7 @@ public class EvenChecker implements Runnable {
 	private IntGenerator generator;
 	private final int id;
 
+	// ππ‘Ï
 	public EvenChecker(IntGenerator g, int ident) {
 		this.generator = g;
 		this.id = ident;

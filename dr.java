@@ -6,5 +6,6 @@ class dr
 		int n = 789;
 		System.out.println(n / 100 * 100);
 		System.out.println(4 | 3);
+		System.out.println("abc");
 	}
 }
