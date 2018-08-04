@@ -1,0 +1,18 @@
+1. InputStream / OutputStream
+处理字节流
+抽象类：所有输入、输出（内存）类的超类，一般使用 FileInputStream / FileOutputStream
+
+2. InputStreamReader / OutputStreamWriter
+处理字符流
+抽象类
+  InputStreamReader：字节流通向字符流的桥梁，将字节流转换为字符流
+  OutputStreamWriter：字符流通向字节流的桥梁，将字符流转换为字节流
+
+3. BufferedReader / BufferedWriter
+Reader 类扩展，文本读取的通用缓冲方式，readLine 方法读取一个文本行，从【字符输入流】读取文本，缓冲各个字符，以提高字符、数组和行的读取效率。
+Writer 类扩展而来，文本写入的通用缓冲方式，newLine 使用平台自己的行分隔符，将文本写入【字符输出流】，缓冲各个字符，从而提供单个字符、数组和字符串的高效写入。
+
+InputStream 能从来源处读取一个一个字节（Byte），所以他是最低级的。
+
+进化过程：
+FileInputStream(byte)  -->  InputStreamReader(字符)  -->  BufferedReader(行）
