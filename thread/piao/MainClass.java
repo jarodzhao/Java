@@ -1,3 +1,5 @@
+import java.util.*;
+
 class MainClass 
 {
 	public static void main(String[] args) 
@@ -9,5 +11,7 @@ class MainClass
 		s1.start();
 		s2.start();
 		s3.start();
+
+		System.out.println(new Date());
 	}
 }

@@ -6,8 +6,11 @@ public abstract class IntGenerator
 
 	public abstract int next();
 	
-	public void cancel() { canceled = true; }
+	public void cancel() {
+		canceled = true;
+	}
 
-	public boolean isCanceled() { return canceled; }
-
+	public boolean isCanceled() {
+		return canceled; 
+	}
 }
