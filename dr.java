@@ -2,7 +2,7 @@ class dr
 {
 	public static void main(String[] args) 
 	{
-		// ä¸€é“é¢è¯•é¢˜ï¼Œå…³äºæ•´é™¤
+		// Ò»µÀÃæÊÔÌâ£¬¹ØÓÚÕû³ı
 		int n = 789;
 		System.out.println(n / 100 * 100);
 		System.out.println(4 | 3);
