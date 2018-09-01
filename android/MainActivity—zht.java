@@ -2,15 +2,12 @@ package com.jarod.smzdm;
 
 import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,22 +28,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void requestPower() {
+
+        // 提示框
+        TextView text1 = findViewById(R.id.text1);
+
         // 判断是否已经有权限
-        if ((checkSelfPermission(Manifest.permission_group.STORAGE)) != 0) {
-            if (shouldShowRequestPermissionRationale(Manifest.permission_group.STORAGE)) {
-                Log.d("zht", "onCreate: 之前拒绝了！");
+        if ((checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)) != 0) {
+
+            if (shouldShowRequestPermissionRationale(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+
+                text1.setText("之前拒绝过。");
                 Intent mIntent = new Intent();
                 mIntent.setAction("android.settings.APPLICATION_DETAILS_SETTINGS");
-                mIntent.setData(Uri.fromParts("", getPackageName(), null));
+                mIntent.setData(Uri.parse("package:" + getPackageName()));
                 startActivity(mIntent);
+
             } else {
+
                 // 显示授权窗体
-                requestPermissions(new String[]{Manifest.permission_group.STORAGE}, 100);
-                Log.d("zht", "onCreate: 开始授权");
+                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+                text1.setText("开始授权...");
             }
         } else {
+
             // 已经有了
-            Log.d("zht", "onCreate: 已经有了！");
+            text1.setText("已经有了!!!");
         }
     }
 
