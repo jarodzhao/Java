@@ -28,6 +28,15 @@ public class ScrList {
 			// 获取对象的方法
             Method method = clz.getDeclaredMethod("toString");
 
+			// 获取对象的属性
+			//Field[] fields = clz.getDeclareFields();
+			//f = fields[i];
+			//f.setAccessible(true);
+
+			//设置对象属性
+			//f.setInt(obj, in);
+
+
 			// 你要预先知道该方法返回的类型
             String ss = (String) method.invoke(t);
 
