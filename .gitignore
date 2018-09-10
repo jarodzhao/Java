@@ -1,4 +1,9 @@
 *.class
 *.zip
+<<<<<<< HEAD
 *.jar
 *.bak
+=======
+*.bak
+*.jar
+>>>>>>> 3df800ab81ec2bd5f3ff3f684bf4f9ec1d28920c
