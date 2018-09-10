@@ -25,7 +25,7 @@ public class ScrList {
 
             T t = list.get(i);
 
-			// 获取对象的方法
+			// 获取对象的方法 // Methods
             Method method = clz.getDeclaredMethod("toString");
 
 			// 获取对象的属性
