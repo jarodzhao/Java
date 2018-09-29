@@ -3,13 +3,13 @@ import sun.misc.BASE64Encoder;
 import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 
-class Test64
+class Test_base64
 {
 	// base64 º”√‹Ω‚√‹
 	public static void main(String[] args) throws ParseException, UnsupportedEncodingException
 	{
 		Base64 base64 = new Base64();
-		String newStr = base64.encode("zht");
+		String newStr = base64.encode("zht3");
 		System.out.println(newStr);
 
 		String newStr2 = base64.decode(newStr);
