@@ -9,7 +9,7 @@ class Test_base64
 	public static void main(String[] args) throws ParseException, UnsupportedEncodingException
 	{
 		Base64 base64 = new Base64();
-		String newStr = base64.encode("zht3");
+		String newStr = base64.encode("ут");
 		System.out.println(newStr);
 
 		String newStr2 = base64.decode(newStr);
