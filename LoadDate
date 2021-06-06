@@ -1,0 +1,51 @@
+package com.jarod.test.compare;
+
+import java.io.*;
+
+/**
+ * 读取和写入巨量数据文件（10+W行数）
+ */
+public class LoadData {
+
+    static File file = new File("d:/c/abc.dat");
+    static File newFile = new File("d:/c/abc2.dat");
+
+    public static void main(String[] args) throws Exception {
+
+        //文件字节数
+        System.out.println(file.length());
+        //读取对象
+        BufferedReader br = new BufferedReader(new FileReader(file));
+
+        //新文件
+        if (!newFile.exists()) {
+            newFile.createNewFile();
+        }
+
+        //写入对象
+        BufferedWriter bw = new BufferedWriter(new FileWriter(newFile));
+
+
+        //开始时间
+        long t1 = System.currentTimeMillis();
+        long sum = 0;
+        String line = null;
+
+        //循环读取文件，写入新文件
+        while ((line = br.readLine()) != null) {
+            sum++;
+            String[] strs = line.split("\\|@\\|");
+
+            bw.write(strs[2] + "," + strs[4] + "\n");
+        }
+
+        //结束时间
+        long t2 = System.currentTimeMillis();
+
+
+        System.out.println("t2-t1 = " + (t2 - t1));
+        System.out.println("sum = " + sum);
+    }
+
+
+}
